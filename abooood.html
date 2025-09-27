@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إنشاء حساب - معرض البحري</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar ثابت -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">🚗 معرض البحري للسيارات</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="asaaa.html">تسجيل الدخول</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html"> تواصل معنا</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="height: 70px;"></div>
+
+  <!-- نموذج إنشاء الحساب -->
+  <div class="container d-flex justify-content-center align-items-start" style="min-height: calc(100vh - 120px);">
+    <div class="card shadow-sm p-4 mt-4" style="max-width: 480px; width: 100%;">
+      <h3 class="text-center mb-3">إنشاء حساب جديد</h3>
+      <form id="registerForm" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="fullName" class="form-label">الاسم الكامل</label>
+          <input type="text" id="fullName" class="form-control" required>
+          <div class="invalid-feedback">الرجاء إدخال الاسم الكامل.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">البريد الإلكتروني</label>
+          <input type="email" id="regEmail" class="form-control" required>
+          <div class="invalid-feedback">الرجاء إدخال بريد إلكتروني صحيح.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">كلمة المرور</label>
+          <input type="password" id="regPassword" class="form-control" minlength="6" required>
+          <div class="invalid-feedback">كلمة المرور يجب أن تكون 6 أحرف على الأقل.</div>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">تأكيد كلمة المرور</label>
+          <input type="password" id="confirmPassword" class="form-control" minlength="6" required>
+          <div class="invalid-feedback" id="confirmFeedback">يرجى تأكيد كلمة المرور.</div>
+        </div>
+        <button type="submit" class="btn btn-dark w-100">إنشاء الحساب</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+    <div id="regSuccessToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">تم إنشاء الحساب بنجاح. جاري التوجيه لتسجيل الدخول...</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="إغلاق">
+         
+        </button>
+      </div>
+    </div>
+    <div id="regErrorToast" class="toast align-items-center text-bg-danger border-0 mt-2" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">حدث خطأ أثناء إنشاء الحساب. حاول لاحقًا.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="إغلاق"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS التحقق وToast -->
+  <script>
+  $(function () {
+    $('#registerForm').on('submit', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const formEl = this;
+      const pwd = $('#regPassword').val();
+      const pwdConfirm = $('#confirmPassword').val();
+
+      // تحقق من تطابق كلمة المرور
+      if(pwd !== pwdConfirm) {
+        $('#confirmPassword')[0].setCustomValidity('كلمة المرور غير متطابقة');
+        $('#confirmFeedback').text('❌ كلمة المرور غير متطابقة.');
+      } else {
+        $('#confirmPassword')[0].setCustomValidity('');
+        $('#confirmFeedback').text('يرجى تأكيد كلمة المرور.');
+      }
+
+      if(!formEl.checkValidity()) {
+        formEl.classList.add('was-validated');
+        return;
+      }
+
+      // عرض Toast نجاح
+      const toastEl = $('#regSuccessToast')[0];
+      new bootstrap.Toast(toastEl).show();
+
+      // توجيه لصفحة تسجيل الدخول بعد 1.4 ثانية
+      setTimeout(() => window.location.href = 'asaaa.html', 1400);
+    });
+  });
+  </script>
+
+</body>
+</html>

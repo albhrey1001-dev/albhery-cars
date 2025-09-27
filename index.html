@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>معرض البحري للسيارات</title>
+
+  <!--  Bootstrap CSS -->
+  <link  rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
+
+  <!--  ملف CSS  -->
+  <link rel="stylesheet" href="style.css"> 
+ 
+</head>
+<body class="bg-light" dir="rtl">
+
+  <header class=" text-white text-center p-3" style="background-color: black;">
+    <img src="imagas/albhri cars.png" alt="شعار" class="img-fluid" style="width: 200px;">
+    <h1 class="mt-2">معرض البحري للسيارات</h1>
+    <p>تشكيلة متنوعة من السيارات الحديثة</p>
+  </header>
+   <!--Navbar ثابتة -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">🚗 معرض البحري للسيارات</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link " href="asaaa.html">تسجيل الدخول</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"> تواصل معنا </a></li>
+
+          <!--  أزرار المودال -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loadModal">تحميل البيانات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#restoreModal">استعادة البيانات</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- حجز مساحة بسبب Navbar  -->
+  <div style="height: 50px;"></div>
+   
+ <!--شريط الصور المتحركة-->
+<div class="imgr my-5">
+  <div class="imgr-slide">
+    <img src="imagas/TOYOTA.jpeg" alt="TOYOTA ">
+    <img src="imagas/MERCEDES.jpeg" alt=" MERCEDES">
+    <img src="imagas/BMW.jpeg" alt="BMW ">
+     <img src="imagas/HYUNDAI.jpeg" alt="HYONDAI">
+  </div>
+</div> 
+  
+<h2>مرحبًا بكم في معرض سيارات البحري،
+  الوجهة الأولى لعشاق السيارات الحديثة والفاخرة. نقدم لعملائنا تجربة مميزة تجمع بين الثقة، الجودة، والخدمة الممتازة.</h2>
+</div>
+
+<!--  روابط -->
+<div class="aaa d-grid gap-2 d-md-flex justify-content-center mt-3">
+  <a href="#ac" class="btn btn-outline-dark">خدمات إضافية</a>
+  <a href="#ab" class="btn btn-outline-dark">مميزاتنا</a>
+</div>
+
+<!--  معرض الشركات -->
+<div class="aab mt-4 p-3 text-white bg-dark text-center rounded-pill">
+  <h3>وكلاء لعدة شركات ومنها</h3>
+</div>
+
+<!--مجموعة الشركات-->
+<section class="gallery">
+  <!-- شركه تويوتا1 -->
+   <a href="TOYO.html">
+    <div class="card">
+      <img src="imagas/TOYOTA.jpeg" alt="TOYOTA  ">
+      <div class="info">
+        <h2 >شركة تويوتا</h2>
+        <p>اليابان: JAPAN</p>
+      </div>
+    </div>
+   </a>
+
+   <!-- شركة مارسيدس 2 -->
+   <a href="MER.html">
+    <div class="card">
+      <img src="imagas/MERCEDES.jpeg" alt=" MERCEDES">
+      <div class="info">
+        <h2>مرسيدس MERCEDES</h2>
+        <p>المانيا : GERMANY</p>
+      </div>
+    </div>
+   </a>
+
+   <!-- شركة بي ام دبليو 3 -->
+   <a href="BM.html">
+    <div class="card">
+      <img src="imagas/BMW.jpeg" alt="  BMW">
+      <div class="info">
+        <h2> بي ام دبليو BMW </h2>
+        <p>المانيا :GERMANY</p>
+      </div>
+    </div>
+   </a>
+
+   <!-- شركة هيونداي 4 -->
+   <a href="HYU.html">
+    <div class="card">
+      <img src="imagas/HYUNDAI.jpeg" alt="  HYUNDAI">
+      <div class="info">
+        <h2>هيونداي HYUNDAI</h2>
+        <p>كوريا :  KORAE</p>
+      </div>
+    </div>
+   </a>
+</section>
+
+<!--  المميزات -->
+<section id="ab" class="mt-5" > 
+  <h3>:المميزات</h3>
+  <ul class="list-group list-group-flush" style="display: inline-block;">
+    <li class="list-group-item">تشكيلة واسعة من السيارات الجديدة والمستعملة بحالة ممتازة.</li>
+    <li class="list-group-item">عروض حصرية وأسعار منافسة تناسب جميع الفئات.</li>
+    <li class="list-group-item">خدمة تقسيط مرنة لتسهيل امتلاك سيارتك.</li>
+    <li class="list-group-item">ضمان معتمد على السيارات المباعة لراحة بالك.</li>
+    <li class="list-group-item">خدمة ما بعد البيع وصيانة دورية مع فريق متخصص.</li>
+    <li class="list-group-item">تحديث دوري للمخزون لعرض أحدث الموديلات.</li>
+  </ul>
+</section>
+
+<!--  خدمات إضافية -->
+<section id="ac" class="mt-5" style="display: inline-block;">
+  <h3>:خدمات إضافية</h3>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">إمكانية حجز السيارة أونلاين قبل زيارتك للمعرض.</li>
+    <li class="list-group-item">خدمة التوصيل حتى باب المنزل داخل المدينة.</li>
+    <li class="list-group-item">تبديل سيارتك القديمة بأخرى جديدة مع تقييم عادل.</li>
+    <li class="list-group-item">فريق دعم عملاء متوفر للإجابة على استفساراتك عبر الهاتف أو الواتساب.</li>
+  </ul>
+</section>
+
+<!--  Toast إشعارات -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+         أهلاً بك في معرض البحري للسيارات!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<!--  مودال تحميل البيانات -->
+<div class="modal fade" id="loadModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">تحميل البيانات</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="loadContent">
+        جاري التحميل...
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ مودال استعادة البيانات -->
+<div class="modal fade" id="restoreModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">استعادة البيانات</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="restoreContent">
+        جاري الاستعادة...
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  jQuery -->
+<script src="BOOTSTRAP/js/jquery-3.7.1.js"></script>
+
+
+  <!-- ✅ Bootstrap JS من الإنترنت فقط للـ Modal -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!--  Bootstrap JS -->
+<script src="BOOTSTRAP/js/bootstrap.js"></script>
+
+<!--  Script لتشغيل التوست -->
+<script>
+  $(document).ready(function(){
+    // تشغيل التوست بعد 2 ثانية من تحميل الصفحة
+    setTimeout(function(){
+      const toastLive = document.getElementById('liveToast');
+      const toast = new bootstrap.Toast(toastLive);
+      toast.show();
+    }, 2000);
+  });
+
+  // ✅ تشغيل المودال تحميل البيانات
+  $('#loadModal').on('shown.bs.modal', function () {
+    $("#loadContent").html("جاري التحميل...");
+    setTimeout(function () {
+      $("#loadContent").html("<div class='text-success fw-bold'>✅ تم تحميل البيانات بنجاح</div>");
+    }, 1000);
+  });
+
+  // ✅ تشغيل المودال استعادة البيانات
+  $('#restoreModal').on('shown.bs.modal', function () {
+    $("#restoreContent").html("جاري الاستعادة...");
+    setTimeout(function () {
+      $("#restoreContent").html("<div class='text-danger fw-bold'>❌ فشل استعادة البيانات</div>");
+    }, 1000);
+  });
+</script> 
+
+</body>
+</html>
+
